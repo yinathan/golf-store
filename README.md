@@ -3,13 +3,20 @@ My project idea is a simple golf store CRUD app with golf clubs being the first 
 
 
 ### List of indended routes
-``` get "/store" => renders index view listing models ```
-``` get "/store/clubs/new" => renders new view with club Schema in a form ```
-``` delete "/store/clubs/:id" => find a product by ID and deletes from database```
-```  put "/store/clubs/:id" => update a product using ID```
-```  post "/store/clubs" => add a product to the database  ```
-```  get "/store/clubs/:id/edit" => render edit view with club Schema to edit    ```
-``` get "/store/clubs" => renders show view listing all clubs currently stored in database ```
+``` get "/store" => renders index view listing models ``` <br/>
+
+``` get "/store/clubs/new" => renders new view with club Schema in a form ```<br/>
+
+``` delete "/store/clubs/:id" => find a product by ID and deletes from database``` <br/>
+
+```  put "/store/clubs/:id" => update a product using ID``` <br/>
+
+```  post "/store/clubs" => add a product to the database  ``` <br/>
+
+```  get "/store/clubs/:id/edit" => render edit view with club Schema to edit    ``` <br/>
+
+``` get "/store/clubs" => renders show view listing all clubs currently stored in database ``` <br/>
+
 
 ### Model Schema
 
