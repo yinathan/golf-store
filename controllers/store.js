@@ -8,6 +8,13 @@ storeRouter.get("/", (req, res) => {
     res.render("index.ejs")
 })
 
+storeRouter.get("/clubs", (req, res) => {
+  Club.find({}, (err, allClubs) => {
+    res.render("show.ejs", { clubs: allClubs });
+  })
+});
+
+
 // New Route
 storeRouter.get("/new", (req, res) => {
     res.render("new.ejs")
@@ -28,7 +35,7 @@ storeRouter.put("/clubs/:id", (req, res) => {
     })
 })
 // Create Route
-storeRouter.post("/", (req, res) => {
+storeRouter.post("/clubs", (req, res) => {
     Club.create(req.body, (err, createdClub) => {
         if (err) {
             console.log(err)
@@ -47,8 +54,12 @@ storeRouter.get("/clubs/:id/edit", (req, res) => {
 })
 
 // Show Route
-storeRouter.get("/clubs", (req, res) => {
-    res.render("show.ejs", { club })
+
+
+storeRouter.get("/clubs/:id", (req, res) => {
+    Club.findById(req.params.id, (err, club) => {
+        res.render("showProduct.ejs", { club })
+    })
 })
 
 module.exports = storeRouter
