@@ -15,5 +15,12 @@
     </style>
     <h1><%= club.name %></h1>
     <img src="<%= club.img %>">
+        <button onclick="location.href='http://localhost:3000/store/clubs/<%=club._id%>/edit'">
+            Update this item</button>
+    <form action="/store/clubs/<%=club._id%>?_method=DELETE" method="POST">
+        <button onclick="location.href='http://localhost:3000/store/clubs/<%=club._id%>'" type="submit">
+            Delete this item</button>
+            </form>
+    <a href="/store/clubs">Back to All Clubs</a>
 </body>
 </html>

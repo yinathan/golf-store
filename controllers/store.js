@@ -15,8 +15,8 @@ storeRouter.get("/clubs", (req, res) => {
 });
 
 
-// New Route
-storeRouter.get("/new", (req, res) => {
+// New Route (clubs)
+storeRouter.get("/clubs/new", (req, res) => {
     res.render("new.ejs")
 })
 
@@ -28,12 +28,7 @@ storeRouter.delete("/clubs/:id", (req, res) => {
 })
 
 // Update Route
-storeRouter.put("/clubs/:id", (req, res) => {
-    Club.findByIdAndUpdate(req.params.id, req.body, (err, updatedClub) => {
-        if(err) console.log(err)
-        res.redirect(`/products/${req.params.id}`)
-    })
-})
+
 // Create Route
 storeRouter.post("/clubs", (req, res) => {
     Club.create(req.body, (err, createdClub) => {
@@ -53,12 +48,18 @@ storeRouter.get("/clubs/:id/edit", (req, res) => {
     })
 })
 
+storeRouter.put("/clubs/:id", (req, res) => {
+  Club.findByIdAndUpdate(req.params.id, req.body, (err, updatedClub) => {
+    if (err) console.log(err);
+    res.redirect(`/store/clubs/${req.params.id}`);
+  });
+});
 // Show Route
 
 
 storeRouter.get("/clubs/:id", (req, res) => {
     Club.findById(req.params.id, (err, club) => {
-        res.render("showProduct.ejs", { club })
+        res.render("showClub.ejs", { club })
     })
 })
 

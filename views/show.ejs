@@ -7,11 +7,26 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Show Page</h1>
+    <style>
+        a {
+            display:inline-block;
+        }
+        a img {
+            max-height:400px;
+            max-width: 400px;
+        }
 
+    </style>
+    <h1>Show Page</h1>
+    <a href="/store">Back to Main Store Page</a> <br/>
+    <a href="/store/clubs/new">Add a New Club</a>
+    <div class="container">
     <% clubs.forEach(club => { %>
+        <div class="card">
         <h3><%= club.name %></h3>
-        <a href="/store/clubs/<%=club._id%>"><img src="<%=club.img%>"></a>
+        <a href="/store/clubs/<%=club._id%>"><img src="<%=club.img%>" id="image"></a>
+        </div>
     <% }) %>
+    </div>
 </body>
 </html>

@@ -4,10 +4,13 @@ const app = express()
 const mongoose = require("mongoose")
 const methodOverride = require("method-override")
 const storeController = require("./controllers/store")
+const morgan = require("morgan")
 
 
 // Middleware
 app.use(express.urlencoded({ extended: true }))
+app.use(morgan("dev"))
+app.use("/static", express.static("static"))
 app.use(methodOverride("_method"))
 
 app.use("/store", storeController)
