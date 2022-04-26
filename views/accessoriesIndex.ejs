@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        a {
+            display: inline-block;
+        }
+
+        a img {
+            max-height: 400px;
+            max-width: 400px;
+        }
+    </style>
+    <h1>Show Page</h1>
+    <a href="/store">Back to Main Store Page</a> <br />
+    <a href="/store/accessories/new">Add a New Accessory</a>
+    <div class="container">
+        <% accessories.forEach(accessory=> { %>
+            <div class="card">
+                <h3>
+                    <%= accessory.name %>
+                </h3>
+                <a href="/store/accessories/<%=accessory._id%>"><img src="<%=accessory.img%>" id="image"></a>
+            </div>
+            <% }) %>
+    </div>
+</body>
+
+</html>

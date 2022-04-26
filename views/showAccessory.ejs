@@ -14,19 +14,18 @@
             max-width: 400px;
             max-height: 400px;
         }
-        
     </style>
     <h1>
-        <%= ball.name %>
+        <%= accessory.name %>
     </h1>
-    <img src="<%= ball.img %>">
-    <button onclick="location.href='http://localhost:3000/store/balls/<%=ball._id%>/edit'">
+    <img src="<%= accessory.img %>">
+    <button onclick="location.href='http://localhost:3000/store/accessories/<%=accessory._id%>/edit'">
         Update this item</button>
-    <form action="/store/balls/<%=ball._id%>?_method=DELETE" method="POST">
-        <button onclick="location.href='http://localhost:3000/store/balls/<%=ball._id%>'" type="submit">
+    <form action="/store/accessories/<%=accessory._id%>?_method=DELETE" method="POST">
+        <button onclick="location.href='http://localhost:3000/store/accessories/<%=accessory._id%>'" type="submit">
             Delete this item</button>
     </form>
-    <a href="/store/balls">Back to All Balls</a>
+    <a href="/store/accessories">Back to All Accessories</a>
 </body>
 
 </html>

@@ -1,8 +1,12 @@
 const express = require("express")
 const Club = require("../models/club.js")
 const Ball = require("../models/ball.js")
+const Accessory = require("../models/accessory.js")
 const storeRouter = express.Router()
+const app = express()
 
+
+app.use("/static", express.static("static"));
 
 
 // Index Route
@@ -22,6 +26,12 @@ storeRouter.get("/balls", (req, res) => {
     })
 })
 
+storeRouter.get("/accessories", (req, res) => {
+    Accessory.find({}, (err, allAccessories) => {
+        res.render("accessoriesIndex.ejs", { accessories: allAccessories})
+    })
+})
+
 // New Route (clubs)
 storeRouter.get("/clubs/new", (req, res) => {
     res.render("newClub.ejs")
@@ -29,6 +39,10 @@ storeRouter.get("/clubs/new", (req, res) => {
 
 storeRouter.get("/balls/new", (req, res) => {
     res.render("newBall.ejs")
+})
+
+storeRouter.get("/accessories/new", (req, res) => {
+    res.render("newAccessory.ejs")
 })
 
 // Delete Route
@@ -42,13 +56,17 @@ storeRouter.delete("/balls/:id", (req, res) => {
         res.redirect("/store/balls")
     })
 })
+storeRouter.delete("/accessories/:id", (req,res) => {
+    Accessory.findByIdAndDelete(req.params.id, (err, deletedAccessory) => {
+        res.redirect("/store/accessories")
+    })
+})
 // Update Route
 
 // Create Route
 storeRouter.post("/clubs", (req, res) => {
     Club.create(req.body, (err, createdClub) => {
         if (err) {
-            console.log(err)
             res.send(err)
         } else {
             res.redirect("/store/clubs")
@@ -59,10 +77,19 @@ storeRouter.post("/clubs", (req, res) => {
 storeRouter.post("/balls", (req, res) => {
     Ball.create(req.body, (err, createdBall) => {
         if (err) {
-            console.log(err)
             res.send(err)
         } else {
             res.redirect("/store/balls")
+        }
+    })
+})
+
+storeRouter.post("/accessories", (req, res) => {
+    Accessory.create(req.body, (err, createdAccessory) => {
+        if (err) {
+            res.send(err)
+        } else {
+            res.redirect("/store/accessories")
         }
     })
 })
@@ -92,6 +119,19 @@ storeRouter.put("/balls/:id", (req, res) => {
         res.redirect(`/store/balls/${req.params.id}`)
     })
 })
+
+storeRouter.get("/accessories/:id/edit", (req, res) => {
+    Accessory.findById(req.params.id, (err, accessory) => {
+        res.render("editAccessory.ejs", { accessory })
+    })
+})
+
+storeRouter.put("/accessories/:id", (req, res) => {
+    Accessory.findByIdAndUpdate(req.params.id, req.body, (err, updatedAccessory) => {
+        if(err) console.log(err)
+        res.redirect(`/store/accessories/${req.params.id}`)
+    })
+})
 // Show Route
 
 
@@ -104,6 +144,12 @@ storeRouter.get("/clubs/:id", (req, res) => {
 storeRouter.get("/balls/:id", (req, res) => {
     Ball.findById(req.params.id, (err, ball) => {
         res.render("showBall.ejs", { ball })
+    })
+})
+
+storeRouter.get("/accessories/:id", (req, res) => {
+    Accessory.findById(req.params.id, (err, accessory) => {
+        res.render("showAccessory.ejs", { accessory })
     })
 })
 
