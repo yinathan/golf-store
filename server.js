@@ -10,7 +10,7 @@ const morgan = require("morgan")
 // Middleware
 app.use(express.urlencoded({ extended: true }))
 app.use(morgan("dev"))
-app.use("/static", express.static("static"))
+app.use("/public",express.static("public"))
 app.use(methodOverride("_method"))
 
 app.use("/store", storeController)

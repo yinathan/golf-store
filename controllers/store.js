@@ -3,10 +3,6 @@ const Club = require("../models/club.js")
 const Ball = require("../models/ball.js")
 const Accessory = require("../models/accessory.js")
 const storeRouter = express.Router()
-const app = express()
-
-
-app.use("/static", express.static("static"));
 
 
 // Index Route

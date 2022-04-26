@@ -5,46 +5,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/styleIndex.css">
+
     <title>Document</title>
 </head>
 
 <body>
-    <style>
-        a {
-            display: inline-block;
-        }
-
-        a img {
-            max-height: 250px;
-            max-width: 250px;
-        }
-
-        nav {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            flex-flow: row nowrap;
-        }
-        .container {
-            width: 1200px;
-            display:flex;
-            align-items: center;
-            justify-content: space-around;
-            flex-flow: row wrap;
-        }
-        body {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-flow: column;
-        }
-    </style>
-    <nav>
-        <a href="/store">Back to Main Store Page</a> <br />
-        <h1>All Clubs</h1>
-
-        <a href="/store/clubs/new">Add a New Club</a>
-    </nav>
+    <h1>All Clubs</h1>
+    <a href="/store">Back to Main Store Page</a> <br />
+    <a href="/store/clubs/new">Add a New Club</a>
     <div class="container">
         <% clubs.forEach(club=> { %>
             <div class="card">

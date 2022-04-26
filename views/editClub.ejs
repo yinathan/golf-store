@@ -1,20 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/styleEdit.css">
     <title>Document</title>
 </head>
+
 <body>
     <h1>Edit a Club</h1>
     <form action="/store/clubs/<%=club._id%>?_method=PUT" method="POST">
-        Name: <input type="text" name="name" value="<%=club.name%>"/><br />
-        Description: <input type="text" name="description" value="<%=club.description%>"/><br />
-        Image: <input type="text" name="img" value="<%=club.img%>"/> <br />
-        Quantity: <input type="number" name="quantity" value="<%=club.quantity%>"/> <br />
-        Price: <input type="number" name="price" value="<%=club.price%>"/> <br />
+        Name: <input type="text" name="name" value="<%=club.name%>" /><br />
+        Description: <input type="text" name="description" value="<%=club.description%>" /><br />
+        Image: <input type="text" name="img" value="<%=club.img%>" /> <br />
+        Quantity: <input type="number" name="quantity" value="<%=club.quantity%>" /> <br />
+        Price: <input type="number" name="price" value="<%=club.price%>" /> <br />
         <input type="submit" value="Update Product" />
-        </form>
+    </form>
 </body>
+
 </html>

@@ -1,0 +1,31 @@
+a {
+    display: inline-block;
+}
+
+a img {
+    max-height: 250px;
+    max-width: 250px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-flow: row nowrap;
+}
+
+.container {
+    width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-flow: row wrap;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+}
+
