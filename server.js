@@ -6,6 +6,10 @@ const methodOverride = require("method-override")
 const storeController = require("./controllers/store")
 const morgan = require("morgan")
 
+//handle root requests
+app.get("/", (req,res) => {
+    res.redirect("/store")
+})
 
 // Middleware
 app.use(express.urlencoded({ extended: true }))
