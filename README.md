@@ -45,7 +45,7 @@ Create Item Page
 
 ### Getting Started
 
-[Click here](https://www.golf-store.herokuapp.com/) to access the application. Click on clubs, balls, or accessories to view the full list of items currently stored in the database. If you wish to create a new item, click "Add New Item" button and fill out the form completely. Updating and deleting items can be done on the individual show pages.
+[Click here](https://www.golf-store.herokuapp.com/store) to access the application. Click on clubs, balls, or accessories to view the full list of items currently stored in the database. If you wish to create a new item, click "Add New Item" button and fill out the form completely. Updating and deleting items can be done on the individual show pages.
 
 ### Future Enhancements
 
