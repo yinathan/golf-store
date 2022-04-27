@@ -29,13 +29,13 @@
         <p class="quantity"><%=ball.quantity%> Remaining</p>
     </div>
     <div class="buttons">
-    <button onclick="location.href='http://localhost:3000/store/balls/<%=ball._id%>/edit'">
+    <button onclick="location.href='/store/balls/<%=ball._id%>/edit'">
         Update this item</button>
     <form action="/store/balls/<%=ball._id%>?_method=DELETE" method="POST">
-        <button onclick="location.href='http://localhost:3000/store/balls/<%=ball._id%>'" type="submit">
+        <button onclick="location.href='/store/balls/<%=ball._id%>'" type="submit">
             Delete this item</button>
     </form>
-    <button onclick="location.href='http://localhost:3000/store/balls'">Back to All Balls</button>
+    <button onclick="location.href='/store/balls'">Back to All Balls</button>
     </div>
 
     </div>

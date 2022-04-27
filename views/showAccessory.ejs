@@ -34,14 +34,14 @@
             </p>
         </div>
         <div class="buttons">
-            <button onclick="location.href='http://localhost:3000/store/accessories/<%=accessory._id%>/edit'">
+            <button onclick="location.href='/store/accessories/<%=accessory._id%>/edit'">
                 Update this item</button>
             <form action="/store/accessories/<%=accessory._id%>?_method=DELETE" method="POST">
-                <button onclick="location.href='http://localhost:3000/store/accessories/<%=accessory._id%>'"
+                <button onclick="location.href='/store/accessories/<%=accessory._id%>'"
                     type="submit">
                     Delete this item</button>
             </form>
-            <button onclick="location.href='http://localhost:3000/store/accessories'">Back to Accessories</button>
+            <button onclick="location.href='/accessories'">Back to Accessories</button>
         </div>
 
     </div>
