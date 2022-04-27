@@ -8,6 +8,13 @@ a img {
     border: 2px solid rgb(160, 53, 53);
     box-shadow: 10px 10px 5px rgb(198, 141, 34);
     border-radius: 25px;
+    transition: all 0.3s 0s ease-in-out;
+}
+
+img:hover {
+    transform: scale(1.2, 1.2);
+    background-color: rgb(210, 124, 20);
+    text-decoration: none;
 }
 
 h1 {
