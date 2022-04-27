@@ -1,3 +1,7 @@
+body {
+    background-color: lightblue;
+}
+
 a {
     display: inline-block;
 }
@@ -5,6 +9,9 @@ a {
 a img {
     height: 300px;
     width: 700px;
+    border:2px solid rgb(160, 53, 53);
+    box-shadow: 10px 10px 5px rgb(198, 141, 34);
+    border-radius:25px;
 }
 
 .name {

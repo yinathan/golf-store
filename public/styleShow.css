@@ -1,8 +1,66 @@
 img {
-    max-width: 400px;
-    max-height: 400px;
+    max-width: 450px;
+    max-height: 450px;
+    border: 2px solid rgb(160, 53, 53);
+    box-shadow: 5px 5px 5px rgb(198, 141, 34);
+    border-radius: 25px;
 }
 
 body {
-    background-color: green;
+    background-color: lightblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+}
+
+.container {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+}
+
+.description {
+    font-size: 1.4em;
+    font-style: italic;
+    margin-top: 2em;
+}
+
+.price {
+    font-size: 1.4em;
+}
+
+.quantity {
+    font-size: 1.4em;
+}
+
+.buttons {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    width: 600px;
+    margin: 20px;
+}
+
+button {
+    font-size: 17px;
+    letter-spacing: 1px;
+    font-weight: 400 !important;
+    background-color: rgb(20, 30, 226);
+    color: #fff;
+    padding: 10px 10px;
+    padding-right: 20px;
+    padding-left: 20px;
+    text-decoration: none;
+    border: 0px;
+    width: max-content;
+    cursor: pointer;
+    transition: all 0.3s 0s ease-in-out;
+    border-radius: 40px;
+}
+button:hover {
+    transform: scale(1.04, 1);
+    background-color: rgb(210, 124, 20);
+    text-decoration: none;
 }

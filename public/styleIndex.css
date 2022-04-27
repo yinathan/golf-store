@@ -3,10 +3,22 @@ a {
 }
 
 a img {
-    max-height: 250px;
-    max-width: 250px;
+    height: 350px;
+    width: 350px;
+    border: 2px solid rgb(160, 53, 53);
+    box-shadow: 10px 10px 5px rgb(198, 141, 34);
+    border-radius: 25px;
 }
 
+h1 {
+    font-size: 4em;
+    margin-bottom: 15px;
+}
+
+h3 {
+    text-align: center;
+
+}
 nav {
     display: flex;
     align-items: center;
@@ -20,6 +32,7 @@ nav {
     align-items: center;
     justify-content: space-around;
     flex-flow: row wrap;
+    margin-top: 1.5em;
 }
 
 body {
@@ -27,5 +40,31 @@ body {
     align-items: center;
     justify-content: center;
     flex-flow: column;
+    background-color: lightblue;
+}
+
+button {
+    font-size: 16px;
+    letter-spacing: 2px;
+    font-weight: 400 !important;
+    background-color: rgb(20, 30, 226);
+    color: #fff;
+    padding: 8px 8px;
+    padding-right: 23px;
+    padding-left: 23px;
+    margin: auto;
+    text-align: center;
+    text-decoration: none;
+    border: 0px;
+    width: max-content;
+    cursor: pointer;
+    transition: all 0.3s 0s ease-in-out;
+    border-radius: 40px;
+}
+
+button:hover {
+    transform: scale(1.04, 1);
+    background-color: rgb(210, 124, 20);
+    text-decoration: none;
 }
 

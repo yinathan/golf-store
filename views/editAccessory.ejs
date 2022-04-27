@@ -11,13 +11,21 @@
 
 <body>
     <h1>Edit an Accessory</h1>
-    <form action="/store/accessories/<%=accessory._id%>?_method=PUT" method="POST">
-        Name: <input type="text" name="name" value="<%=accessory.name%>" /><br />
-        Description: <input type="text" name="description" value="<%=accessory.description%>" /><br />
-        Image: <input type="text" name="img" value="<%=accessory.img%>" /> <br />
-        Quantity: <input type="number" name="quantity" value="<%=accessory.quantity%>" /> <br />
-        Price: <input type="number" name="price" value="<%=accessory.price%>" /> <br />
-        <input type="submit" value="Update Product" />
+    <div class="container">
+
+        <form action="/store/accessories/<%=accessory._id%>?_method=PUT" method="POST">
+            <h4>Name: </h4><br>
+            <input type="text" name="name" value="<%=accessory.name%>" /><br />
+            <h4>Description: </h4><br>
+            <input type="text" name="description" value="<%=accessory.description%>" /><br />
+            <h4>Image:</h4><br>
+            <input type="text" name="img" value="<%=accessory.img%>" /> <br />
+            <h4>Quantity</h4><br>
+            <input type="number" name="quantity" value="<%=accessory.quantity%>" /> <br />
+            <h4>Price</h4><br>
+            <input type="number" name="price" value="<%=accessory.price%>" /> <br />
+    </div>
+    <button type="submit" value="Update Product">Update Product</button>
     </form>
 </body>
 

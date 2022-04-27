@@ -8,13 +8,20 @@
     <title>Document</title>
 </head>
 <body>
+    <div class="container">
+        <div>
     <h1>New Clubs Page</h1>
+    </div>
+    <div>
     <form action="/store/clubs" method="post">
-        Name: <input type="text" name="name" /><br />
-        Description: <input type="text" name="description" /><br />
-        Image: <input type="text" name="img"/> <br />
-        Quantity: <input type="number" name="quantity" /> <br />
-        Price: <input type="number" name="price" /> <br />
-        <input type="submit" name="" value="Add Product" />
+        <h4>Name: </h4><input type="text" name="name" /><br />
+        <h4>Description: </h4><input type="text" name="description" /><br />
+        <h4>Image: </h4><input type="text" name="img"/> <br />
+        <h4>Quantity: </h4> <input type="number" name="quantity" /> <br />
+        <h4>Price: </h4> <input type="number" name="price" /> <br />
+        </div>
+        <button type="submit">Create Club</button>
+        </form>
+        </div>
 </body>
 </html>

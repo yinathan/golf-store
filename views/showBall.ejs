@@ -10,18 +10,35 @@
 </head>
 
 <body>
-
+<div class="container">
+    <div class="name">
     <h1>
         <%= ball.name %>
     </h1>
+    </div>
+    <div>
     <img src="<%= ball.img %>">
+    </div>
+    <div>
+        <p class="description"><%=ball.description%></p>
+    </div>
+    <div>
+        <p class="price">Price: $ <%=ball.price%></p>
+    </div>
+    <div>
+        <p class="quantity"><%=ball.quantity%> Remaining</p>
+    </div>
+    <div class="buttons">
     <button onclick="location.href='http://localhost:3000/store/balls/<%=ball._id%>/edit'">
         Update this item</button>
     <form action="/store/balls/<%=ball._id%>?_method=DELETE" method="POST">
         <button onclick="location.href='http://localhost:3000/store/balls/<%=ball._id%>'" type="submit">
             Delete this item</button>
     </form>
-    <a href="/store/balls">Back to All Balls</a>
+    <button onclick="location.href='http://localhost:3000/store/balls'">Back to All Balls</button>
+    </div>
+
+    </div>
 </body>
 
 </html>

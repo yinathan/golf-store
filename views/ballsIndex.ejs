@@ -12,9 +12,9 @@
 
 <body>
 
-    <h1>Show Page</h1>
-    <a href="/store">Back to Main Store Page</a> <br />
-    <a href="/store/balls/new">Add a New Ball</a>
+    <h1>Golf Balls</h1>
+    <button onclick="location.href='http://localhost:3000/store'" type="button">Back to Store Page</button><br />
+    <button onclick="location.href='http://localhost:3000/store/balls/new'">Add a New Ball</button>
     <div class="container">
         <% balls.forEach(ball=> { %>
             <div class="card">

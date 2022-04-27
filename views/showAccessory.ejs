@@ -6,32 +6,45 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/public/styleShow.css">
-    <title>Document</title>
-
+    <title>Accessories</title>
 </head>
 
 <body>
-<style>
-    img {
-    max-width: 400px;
-    max-height: 400px;
-}
+    <div class="container">
+        <div class="name">
+            <h1>
+                <%= accessory.name %>
+            </h1>
+        </div>
+        <div>
+            <img src="<%= accessory.img %>">
+        </div>
+        <div>
+            <p class="description">
+                <%=accessory.description%>
+            </p>
+        </div>
+        <div>
+            <p class="price">Price: $ <%=accessory.price%>
+            </p>
+        </div>
+        <div>
+            <p class="quantity">
+                <%=accessory.quantity%> Remaining
+            </p>
+        </div>
+        <div class="buttons">
+            <button onclick="location.href='http://localhost:3000/store/accessories/<%=accessory._id%>/edit'">
+                Update this item</button>
+            <form action="/store/accessories/<%=accessory._id%>?_method=DELETE" method="POST">
+                <button onclick="location.href='http://localhost:3000/store/accessories/<%=accessory._id%>'"
+                    type="submit">
+                    Delete this item</button>
+            </form>
+            <button onclick="location.href='http://localhost:3000/store/accessories'">Back to Accessories</button>
+        </div>
 
-body {
-    background-color: green;
-}
-</style>
-    <h1>
-        <%= accessory.name %>
-    </h1>
-    <img src="<%= accessory.img %>">
-    <button onclick="location.href='http://localhost:3000/store/accessories/<%=accessory._id%>/edit'">
-        Update this item</button>
-    <form action="/store/accessories/<%=accessory._id%>?_method=DELETE" method="POST">
-        <button onclick="location.href='http://localhost:3000/store/accessories/<%=accessory._id%>'" type="submit">
-            Delete this item</button>
-    </form>
-    <a href="/store/accessories">Back to All Accessories</a>
+    </div>
 </body>
 
 </html>
