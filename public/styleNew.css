@@ -1,10 +1,14 @@
 body {
-    background-color: lightblue;
+  background-color: rgb(6, 80, 105);
     display: flex;
     justify-content: center;
     align-items: center;
     flex-flow: column;
     width: 100%
+}
+
+h1 {
+    color: white;
 }
 
 input {
@@ -17,6 +21,7 @@ input {
 h4 {
     margin-bottom: 0px;
     font-size: 1.4em;
+    color: white
 }
 
 .container {
@@ -27,7 +32,7 @@ button {
     font-size: 16px;
     letter-spacing: 2px;
     font-weight: 400 !important;
-    background-color: rgb(20, 30, 226);
+    background-color: rgb(192, 33, 33);
     color: #fff;
     padding: 8px 8px;
     padding-right: 23px;

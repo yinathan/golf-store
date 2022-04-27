@@ -1,12 +1,14 @@
 body {
-    background-color: lightblue;
+  background-color: rgb(6, 80, 105);
     display: flex;
     justify-content: center;
     align-items: center;
     flex-flow: column;
-    width: 100%
+    width: 100%;
 }
-
+h1 {
+    color: white;
+}
 input {
     width: 100%;
     height: 30px;
@@ -16,6 +18,7 @@ input {
 h4{
     margin-bottom: 0px;
     font-size: 1.4em;
+    color: white
 }
 .container {
     width: 60%;

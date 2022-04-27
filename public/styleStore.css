@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@300&family=Teko:wght@500&display=swap');
 
 body {
-    background-color: lightblue;
+    background-color: rgb(6, 80, 105);
 }
 
 a {
@@ -23,6 +23,7 @@ a img {
     text-align: center;
     font-size: 50px;
     margin-bottom: 0px;
+    color: white;
 }
 
 .container {
@@ -36,5 +37,6 @@ h2 {
     font-family: 'Teko',sans-serif;
     text-align: center;
     font-size: 30px;
+    color: white;
 }
 

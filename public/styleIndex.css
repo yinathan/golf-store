@@ -26,12 +26,14 @@ h1 {
     font-family: 'Exo 2', sans-serif;
     font-size: 4em;
     margin-bottom: 13px;
+    color: white;
 }
 
 h3 {
     font-size: 2.2em;
     font-family: 'Teko', sans-serif;
     text-align: center;
+    color: white;
 
 }
 nav {
@@ -55,14 +57,14 @@ body {
     align-items: center;
     justify-content: center;
     flex-flow: column;
-    background-color: lightblue;
+  background-color: rgb(6, 80, 105);
 }
 
 button {
     font-size: 16px;
     letter-spacing: 2px;
     font-weight: 400 !important;
-    background-color: rgb(20, 30, 226);
+    background-color: rgb(192, 33, 33);
     color: #fff;
     padding: 8px 8px;
     padding-right: 23px;

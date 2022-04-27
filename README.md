@@ -1,42 +1,52 @@
-# Project Idea
-My project idea is a simple golf store CRUD app with golf clubs being the first model. After reaching MVP, I want to also add golf balls and accessories models as well as setting up the shopping cart and authentication. 
+# Golf Store App
+
+---
+### Summary
 
 
-### List of indended routes
-``` get "/store" => renders index view listing models ``` <br/>
+| Project Name  | Golf Store
+|----------------|------------------|
+| Description   | This is a full CRUD application using express and MongoDB. The user is able to view clubs, balls, accessories, and is also able to update, delete, or create a new item. 
+| Developers | Nathan Yi|
+| Live Website | https://www.golf-store.herokuapp.com|
+| Repo | https://www.github.com/yinathan/golf-store|
 
-``` get "/store/clubs/new" => renders new view with club Schema in a form ```<br/>
-
-``` delete "/store/clubs/:id" => find a product by ID and deletes from database``` <br/>
-
-```  put "/store/clubs/:id" => update a product using ID``` <br/>
-
-```  post "/store/clubs" => add a product to the database  ``` <br/>
-
-```  get "/store/clubs/:id/edit" => render edit view with club Schema to edit    ``` <br/>
-
-``` get "/store/clubs" => renders show view listing all clubs currently stored in database ``` <br/>
+---
 
 
-### Model Schema
+### Technologies Used
++ HTML5
++ CSS3
++ JavaScript
++ jQuery
++ Google Fonts
++ Express
++ Mongoose
++ MongoDB
++ dotenv, ejs, method-override, morgan, nodemon
 
-    const clubs = new Schema({
-        name: { type: String, required: true, unique: true},
-        description { type: String, required: true},
-        img: { type: String },
-        price: { type: number, required: true },
-        quantity: { type: number, required: true },
-    })
+---
 
-### List of Libraries
-- Express, EJS, Method-Override, Morgan, dotenv, mongoose
+### Screenshots
+Home Page
+![Title](home.png)
+All Items Page
+![Index](index.png)
+View Item Page
+![Show](show.png)
+Edit Item Page
+![Edit](edit.png)
+Create Item Page
+![Create](new.png)
 
-### Schedule
 
-Day 1: Get project idea approved and set up basic routes / make sure database is connected
 
-Day 2: Complete basic CRUD app for MVP
+---
 
-Day 3: Work on CSS/Styling and add additional models
+### Getting Started
 
-Day 4: Add shopping cart/AUTH and finish up for presentation
+[Click here](https://www.golf-store.herokuapp.com) to access the application. Click on clubs, balls, or accessories to view the full list of items currently stored in the database. If you wish to create a new item, click "Add New Item" button and fill out the form completely. Updating and deleting items can be done on the individual show pages.
+
+### Future Enhancements
+
+I hope to add authentication to only enable the user to edit, delete, or create new items if they are logged into an account. 
