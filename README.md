@@ -23,21 +23,33 @@
 + Express
 + Mongoose
 + MongoDB
-+ dotenv, ejs, method-override, morgan, nodemon
 
 ---
+### Model Schema
+
+| Keys | Values
+|----------------|------------------|
+| Name   | name of item
+| Description | short description of item
+| Image | url to image|
+| Price | numerical value for price of item|
+| Quantity | numerical value for quantity in stock|
+
+
+
+
 
 ### Screenshots
 Home Page
-![Title](home.png)
+![Title](./screenshots/home.png)
 All Items Page
-![Index](index.png)
+![Index](./screenshots/index.png)
 View Item Page
-![Show](show.png)
+![Show](./screenshots/show.png)
 Edit Item Page
-![Edit](edit.png)
+![Edit](./screenshots/edit.png)
 Create Item Page
-![Create](new.png)
+![Create](./screenshots/new.png)
 
 
 
@@ -45,7 +57,7 @@ Create Item Page
 
 ### Getting Started
 
-[Click here](https://www.golf-store.herokuapp.com/store) to access the application. Click on clubs, balls, or accessories to view the full list of items currently stored in the database. If you wish to create a new item, click "Add New Item" button and fill out the form completely. Updating and deleting items can be done on the individual show pages.
+[Click here](https://golf-store.herokuapp.com) to access the application. Click on clubs, balls, or accessories to view the full list of items currently stored in the database. If you wish to create a new item, click "Add New Item" button and fill out the form completely. Updating and deleting items can be done on the individual show pages.
 
 ### Future Enhancements
 
